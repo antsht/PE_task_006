@@ -24,7 +24,7 @@ check:
 	clang-format -i *.h
 	clang-format -i */*.c
 	clang-format -i */*.h
-	cppcheck --enable=all --suppress=missingIncludeSystem *.c *.h common/*.c common/*.h
+	cppcheck --enable=all --suppress=missingIncludeSystem *.c *.h */*.c */*.h
 
 test:
 	pytest --color=yes -v --tb=short  
