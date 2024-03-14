@@ -43,7 +43,7 @@ void puckxit() {
     exit(EXIT_FAILURE);
 }
 
-void print_invalid_command_message() { printf("INVALID COMMAND\n"); }
+void print_invalid_command_message() { printf("UNKNOWN COMMAND\n"); }
 
 void print_no_data_message() { printf("NO ORDERS\n"); }
 
