@@ -16,10 +16,11 @@ void init_queue(Orders_queue_t *queue) {
     }
 }
 ErrorCode get_command(char *command) {
-    if (scanf("%100s", command) != 1 || !is_valid_command(command)) {
+    fgets(command, 99, stdin);
+    if (command[strlen(command) - 1] == '\n') command[strlen(command) - 1] = '\0';
+    if (!is_valid_command(command)) {
         return INVALID_COMMAND;
     }
-    getchar();
     return OK;
 }
 
