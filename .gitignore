@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+test*
+.gitignore
+.vscode/settings.json
+bin/air_traffic
+src/log.txt
+tests/test_air_traffic.py
