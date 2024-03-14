@@ -5,10 +5,13 @@ EXTRAFLAGS=-fsanitize=leak -fsanitize=address -fsanitize=undefined -fsanitize=un
 
 all: check rebuild
 
-rebuild: clean_all air_traffic clean
+rebuild: clean_all air_traffic cafe clean
 
 air_traffic: clean air_traffic.c common/errors.c common/logger.c
 	$(CC) $(CFLAGS) $(EXTRAFLAGS) air_traffic.c common/errors.c common/logger.c -o  $(BUILD_PATH)air_traffic 
+
+cafe: clean cafe.c cafe_libs/cafe_logic.c common/errors.c common/logger.c 
+	$(CC) $(CFLAGS) $(EXTRAFLAGS) cafe.c cafe_libs/cafe_logic.c common/errors.c common/logger.c -o  $(BUILD_PATH)cafe
 
 clean_all:
 	rm -rf *.o *.a *.so $(BUILD_PATH)*

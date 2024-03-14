@@ -9,11 +9,13 @@ typedef enum {
     INVALID_DATA,
     INVALID_INPUT,
     IMPOSSIBLE_ROUTE,
-    BUFFER_OVERFLOW
+    BUFFER_OVERFLOW,
+    INVALID_COMMAND
 } ErrorCode;
 
 void try(ErrorCode error);
 void puckxit();
+void print_invalid_command_message();
 void print_no_data_message();
 void print_no_impossible_route_message();
 #endif
