@@ -16,7 +16,7 @@ void init_queue(Orders_queue_t *queue) {
     }
 }
 ErrorCode get_command(char *command) {
-    if (scanf("%s", command) != 1 || !is_valid_command(command)) {
+    if (scanf("%100s", command) != 1 || !is_valid_command(command)) {
         return INVALID_COMMAND;
     }
     getchar();
