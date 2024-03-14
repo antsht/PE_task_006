@@ -9,7 +9,7 @@ def test_air_traffic_1():
     assert result.stdout == 'SAFELY'
 
 def test_air_traffic_2():
-    result = run([B_FILE_PATH], input='4000 5000 4', encoding='utf-8', stdout=PIPE)
+    result = run([B_FILE_PATH], input='4000 5000 5', encoding='utf-8', stdout=PIPE)
     assert result.returncode == 0
     assert result.stdout == 'DANGEROUS\a'
 
