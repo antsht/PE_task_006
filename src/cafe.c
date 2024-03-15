@@ -11,6 +11,6 @@ int main(void) {
         .kitchen_orders_amount = 0, .kitchen_income = 0, .bar_orders_amount = 0, .bar_income = 0};
 
     try(main_menu_loop(&kitchen_queue, &bar_queue, &cafe_stats));
-
+    close_logger();
     return 0;
 }

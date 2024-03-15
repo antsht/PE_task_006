@@ -4,6 +4,7 @@ int main(void) {
     air_traffic_t air_traffic = {.lower_bound = 0, .upper_bound = 0, .planes_count = 0};
     try(air_traffic_init(&air_traffic));
     check_air_traffic(&air_traffic);
+    close_logger();
     return 0;
 }
 
